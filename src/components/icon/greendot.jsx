@@ -1,6 +1,6 @@
 import React from "react";
 
-export const greendot = () => {
+export const Greendot = () => {
   return (
     <div>
       <svg

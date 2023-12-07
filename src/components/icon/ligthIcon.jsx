@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ligthIcon = () => {
+export const LigthIcon = () => {
   return (
     <div>
       <svg
