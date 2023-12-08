@@ -16,7 +16,7 @@ import { FigmaIcon } from "./skillIcon/FigmaIcon";
 import { CypressIcon } from "./skillIcon/CypressIcon";
 import { StorybookIcon } from "./skillIcon/StorybookIcon";
 import { GitIcon } from "./skillIcon/GitIcon";
-
+import { Label } from "./Label";
 const skills = [
   {
     icon: <JavaScript />,
@@ -89,15 +89,13 @@ export const Skills = () => {
     skillSets.push(<Skill icon={skill.icon} title={skill.title} />);
   });
   return (
-    <container className="py-24 px-20 flex flex-col justify-between items-center gap-4">
-      <button className="rounded-xl bg-gray-200 text-gray-600 text-base font-medium leading-6 py-1 px-4">
-        Skills
-      </button>
-      <div className="text-xl font-normal leaning-6 text-gray-600">
-        The skills, tools and technologies I am really good at:
-      </div>
+    <container className="py-24 flex flex-col justify-between items-center gap-4 px-20 ">
+      <Label
+        text="Skills"
+        para="The skills, tools and technologies I am really good at:"
+      />
       <div>
-        <div className="grid grid-cols-8 gap-12 mt-12 text-lg font-normal loaning-6 text-gray-600">
+        <div className="grid grid-cols-8 gap-12  text-lg font-normal loaning-6 text-gray-600">
           {/* <skillSets /> */}
           {skills.map((skill, index) => {
             return <Skill icon={skill.icon} title={skill.title} key={index} />;
