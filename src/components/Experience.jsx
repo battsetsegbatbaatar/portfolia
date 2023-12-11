@@ -37,21 +37,23 @@ const histories = [
 
 export const Experience = () => {
   return (
-    <container className="w-screen bg-gray-50">
-      <div className="bg-gray-50 max-w-200 flex flex-col px-8 gap-12 justify-center items-center">
+    <div className="w-screen bg-gray-50">
+      <div className="flex flex-col py-24 px-20 gap-12 justify-center items-center">
         <Label
           text="Experience"
           para="Here is a quick summary of my most recent experiences:"
         />
-        {histories.map((history) => (
-          <Card
-            title={history.position}
-            highlights={history.highlights}
-            startDate={history.startDate}
-            endDate={history.endDate}
-          />
-        ))}
+        <container className="flex flex-col gap-12">
+          {histories.map((history) => (
+            <Card
+              title={history.position}
+              highlights={history.highlights}
+              startDate={history.startDate}
+              endDate={history.endDate}
+            />
+          ))}
+        </container>
       </div>
-    </container>
+    </div>
   );
 };

@@ -9,11 +9,11 @@ export const Hero = () => {
   return (
     <div>
       <main className="py-24 px-20">
-        <div className="flex items-start gap-12 px-8">
+        <div className="flex lg:flex lg:items-start gap-12 px-8">
           <div>
             <div className="flex max-w-142 flex-col justify-center items-start gap-12 self-stretch">
               <div className="flex flex-col gap-2">
-                <h1 className="text-3xl font-bold leading-9 tracking-wide">
+                <h1 className="text-4xl  lg:text-6xl font-bold leading-9 tracking-wide">
                   Hi, I’m Sagar 👋
                 </h1>
                 <p className="text-gray-900 text-base font-medium leading-6">
@@ -47,7 +47,10 @@ export const Hero = () => {
               </div>
             </div>
           </div>
-          <img className="shadow-[30px_30px_#e5e7eb]" src="./Picture.png"></img>
+          <img
+            className="shadow-[0px_2px_2px_0px_#e5e7eb] lg:shadow-[30px_30px_#e5e7eb]"
+            src="./Picture.png"
+          ></img>
         </div>
       </main>
     </div>
