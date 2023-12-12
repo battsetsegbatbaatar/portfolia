@@ -89,13 +89,13 @@ export const Skills = () => {
     skillSets.push(<Skill icon={skill.icon} title={skill.title} />);
   });
   return (
-    <container className="py-24 flex flex-col justify-between items-center gap-4 px-20 ">
+    <container className="py-24 px-4 flex flex-col justify-between items-center gap-4 lg:px-20 ">
       <Label
         text="Skills"
         para="The skills, tools and technologies I am really good at:"
       />
       <div>
-        <div className="grid grid-cols-8 gap-12  text-lg font-normal loaning-6 text-gray-600">
+        <div className="grid grid-cols-3 lg:grid-cols-8 gap-12  text-lg font-normal loaning-6 text-gray-600">
           {/* <skillSets /> */}
           {skills.map((skill, index) => {
             return <Skill icon={skill.icon} title={skill.title} key={index} />;

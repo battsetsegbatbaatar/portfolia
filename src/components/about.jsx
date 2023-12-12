@@ -3,21 +3,18 @@ import React from "react";
 export const About = () => {
   return (
     <div className="w-screen m-0 bg-gray-50">
-      <div className=" max-w-200 py-24 px-20 flex justify-between items-startx">
+      <div className="py-24 px-4 lg:px-20 flex justify-between items-startx">
         <container className=" flex px-8 flex-col items-center gap-12">
           <button className="rounded-xl bg-gray-200 text-gray-600 text-base font-medium leading-6 py-1 px-4">
             About me
           </button>
-          <div className="flex gap-12 marg">
+          <div className="flex flex-col gap-12 lg:flex-row">
             <img
               className="max-w-100 h-[400px] shadow-[-30px_30px_#e5e7eb]"
               src="./Pic.jpg"
             ></img>
             <div className="flex min-w-111 flex-col gap-12">
-              <h1
-                className="text-3xl font-semibold leading-9 text-gray-900
-            "
-              >
+              <h1 className="text-3xl font-semibold leading-9 text-gray-900">
                 Curious about me? Here you have it:
               </h1>
               <div className="text-base font-normal leading-6 text-gray-600 flex flex-col gap-[16px]  ">
