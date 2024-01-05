@@ -1,11 +1,11 @@
 import React from "react";
-import { LigthIcon } from "./icon/ligthIcon";
+import { LigthIcon } from "./icon/LigthIcon";
 import { Menu } from "./icon/Menu";
 
 export const Header = () => {
   return (
-    <div>
-      <header className="flex lg:px-20 px-4 py-4 justify-between items-center self-stretch">
+    <div className="flex flex-col items-center justify-center">
+      <header className="flex lg:w-[1500px] lg:px-20 px-4 py-4 justify-between items-center">
         <a
           href="#"
           className="text-3xl font-bold leading-9 tracking-wide scroll-pl-8"

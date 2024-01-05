@@ -1,5 +1,5 @@
 import React from "react";
-import { LocationIcon } from "./icon/locationIcon";
+import { LocationIcon } from "./icon/LocationIcon";
 import { Greendot } from "./icon/Greendot";
 import { Github } from "./icon/Github";
 import { Twitter } from "./icon/Twitter";
@@ -8,8 +8,12 @@ import { Figma } from "./icon/Figma";
 export const Hero = () => {
   return (
     <div>
-      <main className="py-24 px-4 lg:px-20">
-        <div className="flex flex-col-reverse lg:row lg:items-start gap-12 px-8">
+      <main className="py-24 px-4 lg:px-20 flex flex-col items-center">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-start gap-12 px-8 lg:w-[1500px]">
+          <img
+            className="shadow-[0px_2px_2px_0px_#e5e7eb] lg:shadow-[30px_30px_#e5e7eb]"
+            src="./Pic.jpg"
+          ></img>
           <div>
             <div className="flex max-w-142 flex-col justify-center items-start gap-12 self-stretch">
               <div className="flex flex-col gap-2">
@@ -47,10 +51,6 @@ export const Hero = () => {
               </div>
             </div>
           </div>
-          <img
-            className="shadow-[0px_2px_2px_0px_#e5e7eb] lg:shadow-[30px_30px_#e5e7eb]"
-            src="./Pic.jpg"
-          ></img>
         </div>
       </main>
     </div>

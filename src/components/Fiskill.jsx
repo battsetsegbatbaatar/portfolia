@@ -5,12 +5,12 @@ export const Fiskill = (props) => {
   console.log(props.index);
   return (
     <div
-      className={`flex flex-col justify-center lg:flex-row shadow-[0px_2px_2px_0px_#EEEEEE] rounded-xl ${
+      className={`flex flex-col lg:w-[1500px] justify-center shadow-[0px_2px_2px_0px_#EEEEEE] rounded-xl lg:flex-row lg:${
         props.index === 1 && "flex-row-reverse"
       }`}
     >
       <img
-        className="py-12 px-12 rounded-xl bg-gray-50 lg:w-[50%]"
+        className="py-12 px-12 rounded-xl bg-gray-50 lg:w-[40%]"
         src="/Picture.jpg"
       />
       <div className="py-12 px-12 rounded-xl flex flex-col gap-8 lg:w-[50%]">

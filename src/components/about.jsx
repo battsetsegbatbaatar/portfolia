@@ -2,8 +2,8 @@ import React from "react";
 
 export const About = () => {
   return (
-    <div className="w-screen m-0 bg-gray-50">
-      <div className="py-24 px-4 lg:px-20 flex justify-between items-startx">
+    <div className="w-screen m-0 bg-gray-50 flex flex-col items-center">
+      <div className="py-24 px-4 lg:px-20 flex justify-between lg:w-[1500px] ">
         <container className=" flex px-8 flex-col items-center gap-12">
           <button className="rounded-xl bg-gray-200 text-gray-600 text-base font-medium leading-6 py-1 px-4">
             About me

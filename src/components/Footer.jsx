@@ -1,5 +1,5 @@
 import React from "react";
-import { C } from "./icon/c";
+import { C } from "./icon/C";
 
 export const Footer = () => {
   return (

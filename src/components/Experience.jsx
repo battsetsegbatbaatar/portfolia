@@ -30,7 +30,8 @@ const histories = [
     startDate: "Dec 2015 ",
     endDate: " May 2017",
     highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     ],
   },
 ];
