@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -8,9 +7,6 @@ import { Experience } from "@/components/Experience";
 import { Work } from "@/components/Work";
 import { ContactMe } from "@/components/ContactMe";
 import { Footer } from "@/components/Footer";
-import { Count } from "@/components/Count";
-import { useState } from "react";
-import { Time } from "@/components/Time";
 
 const inter = Inter({ subsets: ["latin"] });
 
