@@ -1,6 +1,6 @@
 import React from "react";
-// import { LocationIcon } from "./icon/LocationIcon";
-// import { Greendot } from "./icon/Greendot";
+import { LocationIcon } from "./icon/LocationIcon";
+import { DotIcon } from "./icon/DotIcon";
 import { Github } from "./icon/Github";
 import { Twitter } from "./icon/Twitter";
 import { Figma } from "./icon/Figma";
@@ -31,13 +31,13 @@ export const Hero = () => {
               <div className="flex flex-col max-w-142 justify-center items-start gap-12 self-stretch">
                 <div>
                   <div className="flex p-1 gap-1">
-                    {/* <LocationIcon /> */}
+                    <LocationIcon />
                     <h5 className="text-gray-900 text-base font-medium leading-6">
                       Ahmedabad, India
                     </h5>
                   </div>
                   <div className="flex p-1 gap-1">
-                    {/* <Greendot /> */}
+                    <DotIcon />
                     <h5 className="text-gray-900 text-base font-medium leading-6">
                       Available for new projects
                     </h5>

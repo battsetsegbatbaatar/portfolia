@@ -1,11 +1,11 @@
 import React from "react";
-// import { LigthIcon } from "./icon/ligthIcon";
+import { LigthIcon } from "./icon/LigthIcon";
 import { Menu } from "./icon/Menu";
 
 export const Header = () => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <header className="flex lg:w-[1500px] lg:px-20 px-4 py-4 justify-between items-center">
+      <header className="flex lg:w-[150. ad0px] lg:px-20 px-4 py-4 justify-between items-center">
         <a
           href="#"
           className="text-3xl font-bold leading-9 tracking-wide scroll-pl-8"
@@ -17,7 +17,7 @@ export const Header = () => {
           <a>Work</a>
           <a>Testimonials</a>
           <a>Contact</a>
-          {/* <LigthIcon /> */}
+          <LigthIcon />
           <button className="rounded-xl bg-gray-900 text-gray-50 text-base font-medium leading-6 py-1 px-4 ">
             Download CV
           </button>
