@@ -1,5 +1,5 @@
 import React from "react";
-import { LigthIcon } from "./icon/LigthIcon";
+// import { LigthIcon } from "./icon/ligthIcon";
 import { Menu } from "./icon/Menu";
 
 export const Header = () => {
@@ -17,7 +17,7 @@ export const Header = () => {
           <a>Work</a>
           <a>Testimonials</a>
           <a>Contact</a>
-          <LigthIcon />
+          {/* <LigthIcon /> */}
           <button className="rounded-xl bg-gray-900 text-gray-50 text-base font-medium leading-6 py-1 px-4 ">
             Download CV
           </button>
