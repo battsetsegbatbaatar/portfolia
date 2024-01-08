@@ -4,7 +4,7 @@ import { Menu } from "./icon/Menu";
 
 export const Header = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-between">
       <header className="flex lg:w-[150. ad0px] lg:px-20 px-4 py-4 justify-between items-center">
         <a
           href="#"
