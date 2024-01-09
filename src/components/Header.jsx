@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { LigthIcon } from "./icon/LigthIcon";
 import { Menu } from "./icon/Menu";
 
@@ -22,8 +22,8 @@ export const Header = () => {
             Download CV
           </button>
         </nav>
-        <nav className="flex lg:hidden">
-          <a href="">
+        <nav className="flex relative lg:hidden">
+          <a href="Menu">
             <Menu />
           </a>
         </nav>
