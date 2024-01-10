@@ -4,7 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:wght@300;400;500;600;700&display=swap");
 
-body {
+/* body {
   margin: 0;
   color: rgb(var(--foreground-rgb));
   font-family: "Inter", sans-serif;
@@ -14,7 +14,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 /* .navFont {
   color: #4b5563;

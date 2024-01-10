@@ -7,7 +7,7 @@ export const Skill = (props) => {
     <div className="flex flex-col items-center gap-2">
       {/* {props.icon} */}
       {props.icon}
-      <p>{props.title}</p>
+      <p className="dark:text-white">{props.title}</p>
     </div>
   );
 };

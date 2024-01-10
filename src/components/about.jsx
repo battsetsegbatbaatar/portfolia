@@ -2,10 +2,10 @@ import React from "react";
 
 export const About = () => {
   return (
-    <div className="w-screen m-0 bg-gray-50 flex flex-col items-center">
+    <div className="w-screen m-0 bg-gray-50 flex flex-col items-center dark:bg-[#111827]">
       <div className="py-24 px-4 lg:px-20 flex justify-between lg:w-[1500px] ">
         <container className=" flex px-8 flex-col items-center gap-12">
-          <button className="rounded-xl bg-gray-200 text-gray-600 text-base font-medium leading-6 py-1 px-4">
+          <button className="rounded-xl bg-gray-200 text-gray-600 dark:bg-[#374151] dark:text-[#D1D5DB] text-base font-medium leading-6 py-1 px-4">
             About me
           </button>
           <div className="flex flex-col gap-12 lg:flex-row">
@@ -14,10 +14,10 @@ export const About = () => {
               src="./Pic.jpg"
             ></img>
             <div className="flex min-w-111 flex-col gap-12">
-              <h1 className="text-3xl font-semibold leading-9 text-gray-900">
+              <h1 className="text-3xl font-semibold leading-9 text-gray-900 dark:text-[#D1D5DB]">
                 Curious about me? Here you have it:
               </h1>
-              <div className="text-base font-normal leading-6 text-gray-600 flex flex-col gap-[16px]  ">
+              <div className="text-base font-normal leading-6 text-gray-600  dark:text-[#D1D5DB] flex flex-col gap-[16px]  ">
                 <p>
                   I'm a passionate, self-proclaimed designer who specializes in
                   full stack development (React.js & Node.js). I am very
@@ -46,18 +46,17 @@ export const About = () => {
                   build in public, or you can follow me on GitHub.
                 </p>
                 <p>Finally, some quick bits about me.</p>
-                <url className="text-base  flex gap-3 font-normal leading-6 text-gray-600">
-                  <dev>
+                <url className="text-base  flex gap-3 font-normal leading-6 text-gray-600 dark:text-[#D1D5DB]">
+                  <div className="text-gray-600 dark:text-[#D1D5DB]">
                     <li>B.E. in Computer Engineering</li>
                     <li>Full time freelancer</li>
-                  </dev>
-                  <dev>
+                  </div>
+                  <div className=" text-gray-600 dark:text-[#D1D5DB]">
                     <li>Avid learner</li>
                     <li>Avid learner</li>
-                  </dev>
+                  </div>
                 </url>
-
-                <p>
+                <p className="text-gray-600 dark:text-[#D1D5DB]">
                   One last thing, I'm available for freelance work, so feel free
                   to reach out and say hello! I promise I don't bite 😉
                 </p>

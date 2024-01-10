@@ -17,6 +17,7 @@ import { CypressIcon } from "./skillIcon/CypressIcon";
 import { StorybookIcon } from "./skillIcon/StorybookIcon";
 import { GitIcon } from "./skillIcon/GitIcon";
 import { Label } from "./Label";
+// import { ExpressDarkIcon } from "./skillIcon/ExpressDarkIcon";
 const skills = [
   {
     icon: <JavaScript />,
@@ -39,7 +40,7 @@ const skills = [
     title: "Node.js",
   },
   {
-    icon: <ExpressJSIcon />,
+    icon: <Experience />,
     title: "Express.js",
   },
   {
@@ -89,7 +90,7 @@ export const Skills = () => {
     skillSets.push(<Skill icon={skill.icon} title={skill.title} />);
   });
   return (
-    <container className="py-24 px-4 flex flex-col justify-between items-center gap-4 lg:px-20 ">
+    <container className="py-24 px-4 flex flex-col justify-between items-center gap-4 lg:px-20 dark:bg-black dark:text-white">
       <Label
         text="Skills"
         para="The skills, tools and technologies I am really good at:"
