@@ -38,7 +38,7 @@ const histories = [
 
 export const Experience = () => {
   return (
-    <div className="w-screen bg-gray-50">
+    <div className="w-screen bg-gray-50 dark:bg-[#111827] dark:text-[#D1D5DB]">
       <div className="flex flex-col py-24 px-4 lg:px-20 gap-12 justify-center items-center">
         <Label
           text="Experience"

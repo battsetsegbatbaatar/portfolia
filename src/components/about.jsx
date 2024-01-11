@@ -5,7 +5,7 @@ export const About = () => {
     <div className="w-screen m-0 bg-gray-50 flex flex-col items-center dark:bg-[#111827]">
       <div className="py-24 px-4 lg:px-20 flex justify-between lg:w-[1500px] ">
         <container className=" flex px-8 flex-col items-center gap-12">
-          <button className="rounded-xl bg-gray-200 text-gray-600 dark:bg-[#374151] dark:text-[#D1D5DB] text-base font-medium leading-6 py-1 px-4">
+          <button className="rounded-xl bg-gray-200 text-gray-600 dark:bg-[#374151] dark:text-[#D1D5DB] text-base font-medium leading-6 py-1 px-4 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 duration-200">
             About me
           </button>
           <div className="flex flex-col gap-12 lg:flex-row">

@@ -54,7 +54,7 @@ const histories = [
 
 export const Work = () => {
   return (
-    <div className="py-24 px-4 flex flex-col justify-between items-center gap-12 lg:px-20 ">
+    <div className="py-24 px-4 flex flex-col justify-between items-center gap-12 lg:px-20 dark:bg-black dark:text-white">
       <Label text="Work" para="Some of the noteworthy projects I have built:" />
       {histories.map((history, index) => (
         <Fiskill

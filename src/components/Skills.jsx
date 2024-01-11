@@ -40,7 +40,7 @@ const skills = [
     title: "Node.js",
   },
   {
-    icon: <Experience />,
+    icon: <ExpressJSIcon />,
     title: "Express.js",
   },
   {
