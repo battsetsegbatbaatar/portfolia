@@ -9,7 +9,7 @@ import { Call } from "./icon/Call";
 
 export const ContactMe = () => {
   return (
-    <div className="flex flex-col sm:py-24 sm:px-4 lg:px-20 justify-center items-center gap-12 dark:bg-black dark:text-white">
+    <div className="flex flex-col px-2 py-2 sm:py-24 sm:px-4 lg:px-20 justify-center items-center gap-12 dark:bg-black dark:text-white">
       <Label
         text="Get in touch"
         para="What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect."

@@ -1,21 +1,36 @@
-import React, { useEffect, useState } from "react";
-import { Menu } from "./icon/Menu";
-
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+import React, { useEffect, useRef, useState } from "react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 export const Header = () => {
   const [theme, setTheme] = useState("light");
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   const toggle = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else setTheme("light");
-    console.log();
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
 
+  const handleDownloadPdf = () => {
+    const pageRef = useRef();
+
+    const downloadPdf = () => {
+      const input = pageRef.current;
+
+      html2canvas(input).then((canvas) => {
+        const imgData = canvas.toDataURL("img/png");
+        const doc = new jsPDF("p", "mm", "a4");
+        const componentWidth = doc.internal.pageSize.getWidth();
+        const componentHeight = doc.internal.pageSize.getHeight();
+        doc.addImage(imgData, "PNG", 0, 0, componentWidth, componentHeight);
+
+        doc.save("Erwin.pdf");
+      });
+    };
+    downloadPdf();
+  };
   return (
     <div className="flex flex-col items-center justify-center dark:bg-black dark:text-white">
       <header className="flex w-screen lg:w-[1500px] lg:px-20 px-4 py-4 justify-between items-center dark:bg-black dark:text-white">
@@ -57,41 +72,92 @@ export const Header = () => {
             alt=""
           />
           <a
-            // href={require("../path/to/file.pdf")}
-            // download="myFile"
+            onClick={handleDownloadPdf}
             className="rounded-xl bg-gray-900 text-gray-50 text-base font-medium leading-6 py-1 px-4 dark:bg-white dark:text-black transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 duration-200"
           >
             Download CV
           </a>
         </nav>
-        <nav className="flex relative lg:hidden">
-          <a href="Menu" onClick={Menu}>
-            <Menu />
-          </a>
-          <nav className="dark:bg-black dark:text-white flex flex-col position">
-            <a href="About" className="hover:bg-[#ddd]">
-              About
-            </a>
-            <a href="Work" className="hover:bg-[#ddd]">
-              Work
-            </a>
-            <a href="Testimonials" className="hover:bg-[#ddd]">
-              Testimonials
-            </a>
-            <a href="Contact" className="hover:bg-[#ddd]">
-              Contact
-            </a>
-            <img
-              onClick={toggle}
-              src={theme === "light" ? "/sun.jpg" : "/Icon.png"}
-              alt=""
-            />
-            <button className="rounded-xl bg-gray-900 text-gray-50 text-base font-medium leading-6 py-1 px-4 dark:bg-white dark:text-black">
-              Download CV
-            </button>
-          </nav>
-        </nav>
+        <section className="flex lg:hidden  dark:bg-black dark:text-white">
+          <div
+            className="HAMBURGER-ICON space-y-2  dark:bg-black dark:text-white"
+            onClick={() => setIsNavOpen((prev) => !prev)}
+          >
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+          </div>
+          <div
+            className={`${
+              isNavOpen ? "showMenuNav" : "hideMenuNav"
+            } dark:bg-black dark:text-white`}
+          >
+            <div
+              className="absolute top-0 right-0 px-8 py-8  dark:bg-black dark:text-white"
+              onClick={() => setIsNavOpen(false)}
+            >
+              <svg
+                className="h-8 w-8 text-gray-600"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </div>
+            <nav className="flex flex-col mt-[70px] py-3 px-3 items-center justify-between h-auto min-w-[320px]  dark:bg-black dark:text-white">
+              <div className="p-4 flex flex-col gap-4 justify-start self-stretch  text-gray-900 text-base font-medium leading-6 dark:bg-black dark:text-white">
+                <line className="bg-black h-[1px] dark:bg-white"></line>
+                <a href="/about">About</a>
+                <a href="/Work">Work</a>
+                <a href="/Testimonials">Testimonials</a>
+                <a href="/contact">Contact</a>
+              </div>
+
+              <div className="p-4 gap-4 flex flex-col justify-start self-stretch">
+                <line className="bg-black h-[1px] dark:bg-white"></line>
+                <div className="flex justify-between">
+                  <p>Switch Themes</p>
+                  <img
+                    className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 duration-200"
+                    onClick={toggle}
+                    src={theme === "light" ? "/sun.jpg" : "/Icon.png"}
+                    alt=""
+                  />
+                </div>
+
+                <a
+                  onClick={handleDownloadPdf}
+                  className="rounded-xl flex justify-center bg-gray-900 text-gray-50 text-base font-medium leading-6 py-1 px-4 dark:bg-white dark:text-black transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 duration-200"
+                >
+                  Download CV
+                </a>
+              </div>
+            </nav>
+          </div>
+        </section>
       </header>
+      <style>{`
+      .hideMenuNav {
+        display: none;
+      }
+      .showMenuNav {
+        display: block;
+        position: absolute;s
+        width: 80%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background: white;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+      }
+    `}</style>
     </div>
   );
 };
