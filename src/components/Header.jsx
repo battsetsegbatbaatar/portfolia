@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import React, { useEffect, useState } from "react";
 
 export const Header = () => {
   const [theme, setTheme] = useState("light");
@@ -12,25 +11,12 @@ export const Header = () => {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-
-  const handleDownloadPdf = () => {
-    const pageRef = useRef();
-
-    const downloadPdf = () => {
-      const input = pageRef.current;
-
-      html2canvas(input).then((canvas) => {
-        const imgData = canvas.toDataURL("img/png");
-        const doc = new jsPDF("p", "mm", "a4");
-        const componentWidth = doc.internal.pageSize.getWidth();
-        const componentHeight = doc.internal.pageSize.getHeight();
-        doc.addImage(imgData, "PNG", 0, 0, componentWidth, componentHeight);
-
-        doc.save("Erwin.pdf");
-      });
-    };
-    downloadPdf();
+  const handlePDF = () => {
+    const pdf = new jsPDF();
+    pdf.text("public/sagar-cv-2023 (1).pdf", 10, 10);
+    pdf.save("bg_resume.pdf");
   };
+
   return (
     <div className="flex flex-col items-center justify-center dark:bg-black dark:text-white">
       <header className="flex w-screen lg:w-[1500px] lg:px-20 px-4 py-4 justify-between items-center dark:bg-black dark:text-white">
@@ -72,7 +58,7 @@ export const Header = () => {
             alt=""
           />
           <a
-            onClick={handleDownloadPdf}
+            onClick={handlePDF}
             className="rounded-xl bg-gray-900 text-gray-50 text-base font-medium leading-6 py-1 px-4 dark:bg-white dark:text-black transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 duration-200"
           >
             Download CV
@@ -131,7 +117,7 @@ export const Header = () => {
                 </div>
 
                 <a
-                  onClick={handleDownloadPdf}
+                  onClick={handlePDF}
                   className="rounded-xl flex justify-center bg-gray-900 text-gray-50 text-base font-medium leading-6 py-1 px-4 dark:bg-white dark:text-black transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 duration-200"
                 >
                   Download CV

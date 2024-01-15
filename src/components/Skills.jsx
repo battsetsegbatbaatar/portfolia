@@ -6,8 +6,10 @@ import { Typescript } from "./skillIcon/Typescript";
 import { ReactIcom } from "./skillIcon/ReactIcom";
 import { NextJSIcon } from "./skillIcon/NextJSIcon";
 import { ExpressJSIcon } from "./skillIcon/ExpressJSIcon";
+import { ExpressLight } from "./skillIcon/ExpressLight";
 import { NestJSIcon } from "./skillIcon/NestJSIcon";
 import { SocketIOIcon } from "./skillIcon/SocketIOIcon";
+import { SocketLigth } from "./skillIcon/SocketLigth";
 import { PostgreSQLIcon } from "./skillIcon/PostgreSQLIcon";
 import { MongoDBIcon } from "./skillIcon/MongoDBIcon";
 import { SassScssIcon } from "./skillIcon/SassScssIcon";
@@ -22,34 +24,44 @@ const skills = [
   {
     icon: <JavaScript />,
     title: "JavaScript",
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     icon: <Typescript />,
     title: "Typescript",
+    url: "https://www.typescriptlang.org/",
   },
   {
     icon: <ReactIcom />,
     title: "React",
+    url: "https://react.dev/",
   },
   {
     icon: <NextJSIcon />,
     title: "Next.js",
+    url: "https://nextjs.org/",
   },
   {
     icon: <NodeJSIcon />,
     title: "Node.js",
+    url: "https://nodejs.org/en",
   },
   {
     icon: <ExpressJSIcon />,
     title: "Express.js",
+    darkModeIcon: <ExpressLight />,
+    url: "https://expressjs.com/",
   },
   {
     icon: <NestJSIcon />,
     title: "Nest.js",
+    url: "https://nestjs.com/",
   },
   {
     icon: <SocketIOIcon />,
     title: "Socket.io",
+    darkModeIcon: <SocketLigth />,
+    url: "https://socket.io/",
   },
   {
     icon: <PostgreSQLIcon />,
