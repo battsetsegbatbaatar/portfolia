@@ -11,11 +11,12 @@ export const Header = () => {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-  const handlePDF = () => {
-    const pdf = new jsPDF();
-    pdf.text("public/sagar-cv-2023 (1).pdf", 10, 10);
-    pdf.save("bg_resume.pdf");
-  };
+
+  // const handlePDF = () => {
+  //   const pdf = new jsPDF();
+  //   pdf.add;
+  //   pdf.save("sagar_resume.pdf");
+  // };
 
   return (
     <div className="flex flex-col items-center justify-center dark:bg-black dark:text-white">
@@ -57,8 +58,12 @@ export const Header = () => {
             src={theme === "light" ? "/sun.jpg" : "/Icon.png"}
             alt=""
           />
+          {/* <PDF id="pdf-content" />   */}
           <a
-            onClick={handlePDF}
+            href="../Home/sagar-cv.pdf"
+            download="../Home/sagar-cv.pdf"
+            target="_blank"
+            rel="noreferrer"
             className="rounded-xl bg-gray-900 text-gray-50 text-base font-medium leading-6 py-1 px-4 dark:bg-white dark:text-black transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 duration-200"
           >
             Download CV
@@ -117,7 +122,10 @@ export const Header = () => {
                 </div>
 
                 <a
-                  onClick={handlePDF}
+                  href="../Home/sagar-cv.pdf"
+                  download="../Home/sagar-cv.pdf"
+                  target="_blank"
+                  rel="noreferrer"
                   className="rounded-xl flex justify-center bg-gray-900 text-gray-50 text-base font-medium leading-6 py-1 px-4 dark:bg-white dark:text-black transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 duration-200"
                 >
                   Download CV

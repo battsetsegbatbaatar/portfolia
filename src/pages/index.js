@@ -31,11 +31,12 @@ import { useCallback, useEffect, useState } from "react";
 
 export default function Home() {
   // const pageRef = useRef(null);
-
   // const downloadPdf = () => {
-  //   const input = pageRef.current;
-
+  //   // const input = pageRef.current;
+  //   // console.log("input", input);
+  //   const input = document.getElementById("pdf-content");
   //   html2canvas(input).then((canvas) => {
+  //     console.log("canvas");
   //     const imgData = canvas.toDataURL("img/png");
   //     const doc = new jsPDF("p", "mm", "a4");
   //     const componentWidth = doc.internal.pageSize.getWidth();

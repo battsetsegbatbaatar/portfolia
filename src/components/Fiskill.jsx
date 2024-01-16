@@ -5,7 +5,7 @@ export const Fiskill = (props) => {
   console.log(props.index);
   return (
     <div
-      className={`flex flex-col lg:w-[1500px] justify-center shadow-[0px_1px_1px_0px_#EEEEEE] dark:shadow-[0px_1px_1px_0px_#0000001a] rounded-xl lg:flex-row dark:bg-[#1F2937] dark:text-[#D1D5DB] lg:${
+      className={`flex flex-col lg:w-[1500px] shadow-[0px_1px_1px_0px_#EEEEEE] dark:shadow-[0px_1px_1px_0px_#0000001a] rounded-xl lg:flex-row dark:bg-[#1F2937] dark:text-[#D1D5DB] lg:${
         props.index === 1 && "flex-row-reverse"
       }`}
     >
