@@ -1,58 +1,48 @@
 import React from "react";
-import { LocationIcon } from "./icon/LocationIcon";
-import { DotIcon } from "./icon/DotIcon";
-import { Github } from "./icon/Github";
-import { Twitter } from "./icon/Twitter";
-import { Figma } from "./icon/Figma";
 
 export const Hero = () => {
   return (
-    <div>
-      <main className="py-24 px-4 lg:px-20 flex flex-col items-center bg-white dark:bg-black dark:text-white">
-        <div className="flex flex-col lg:flex-row-reverse lg:items-start gap-12 px-8 lg:w-[1500px]  dark:text-white">
-          <img
-            className="shadow-[0px_2px_2px_0px_#e5e7eb] lg:shadow-[30px_30px_#e5e7eb]"
-            src="./Pic.jpg"
-          ></img>
-          <div>
-            <div className="flex max-w-142 flex-col justify-center items-start gap-12 self-stretch">
-              <div className="flex flex-col gap-2  dark:text-white">
-                <h1 className="text-4xl  lg:text-6xl font-bold leading-9 tracking-wide">
-                  Hi, I’m Sagar 👋
-                </h1>
-                <p className="text-gray-900 text-base font-medium leading-6 dark:text-white">
-                  I'm a full stack developer (React.js & Node.js) with a focus
-                  on creating (and occasionally designing) exceptional digital
-                  experiences that are fast, accessible, visually appealing, and
-                  responsive. Even though I have been creating web applications
-                  for over 7 years, I still love it as if it was something new.
-                </p>
-              </div>
-              <div className="flex flex-col max-w-142 justify-center items-start gap-12 self-stretch dark:text-white">
-                <div>
-                  <div className="flex p-1 gap-1">
-                    <LocationIcon />
-                    <h5 className="text-gray-900 text-base font-medium leading-6 dark:text-white">
-                      Ahmedabad, India
-                    </h5>
-                  </div>
-                  <div className="flex p-1 gap-1">
-                    <DotIcon />
-                    <h5 className="text-gray-900 text-base font-medium leading-6 dark:text-white">
-                      Available for new projects
-                    </h5>
-                  </div>
-                </div>
-                <div className="flex p-1 gap-1">
-                  <Github />
-                  <Twitter />
-                  <Figma />
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className="max-w-3xl mx-auto px-6 pt-24 pb-16">
+      <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-2">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+            Батцэцэг Батбаатар
+          </h1>
+          <p className="text-lg text-gray-500 dark:text-gray-400 font-medium">
+            Backend & Fullstack Developer
+          </p>
         </div>
-      </main>
-    </div>
+
+        <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
+          Node.js, React, PostgreSQL, GraphQL ашиглан хурдан, найдвартай backend
+          систем бүтээдэг. Одоогоор MEVENTO LLC-д ажиллаж байна.
+        </p>
+
+        <div className="flex flex-col gap-1 text-sm text-gray-500 dark:text-gray-400">
+          <span>📍 Хан-Уул, Улаанбаатар</span>
+          <span className="flex items-center gap-1">
+            <span className="inline-block w-2 h-2 rounded-full bg-green-400"></span>
+            Шинэ боломжид нээлттэй
+          </span>
+        </div>
+
+        <div className="flex gap-3">
+          <a
+            href="https://github.com/battsetsegbatbaatar"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300 hover:border-gray-400 transition-colors"
+          >
+            GitHub
+          </a>
+          <a
+            href="mailto:bg_elestren@icloud.com"
+            className="text-sm px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:opacity-80 transition-opacity"
+          >
+            Холбоо барих
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
