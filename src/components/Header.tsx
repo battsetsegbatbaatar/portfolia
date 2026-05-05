@@ -37,7 +37,7 @@ export const Header = () => {
     <div className="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
       <header className="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="/" className="text-lg font-bold text-gray-900 dark:text-white tracking-tight">
-          BB
+          BG
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
