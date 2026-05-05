@@ -1,10 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+const navLinks = {
+  en: [
+    { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
+    { href: "#work", label: "Projects" },
+    { href: "#contact", label: "Contact" },
+  ],
+  mn: [
+    { href: "#about", label: "Тухай" },
+    { href: "#skills", label: "Ур чадвар" },
+    { href: "#work", label: "Ажлууд" },
+    { href: "#contact", label: "Холбоо" },
+  ],
+};
+
+const cvLabel = { en: "Download CV", mn: "CV татах" };
 
 export const Header = () => {
   const [theme, setTheme] = useState("light");
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { lang, toggle } = useLanguage();
 
-  const toggle = () => {
+  const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
@@ -12,12 +31,7 @@ export const Header = () => {
     document.body.className = theme;
   }, [theme]);
 
-  const navLinks = [
-    { href: "#about", label: "Тухай" },
-    { href: "#skills", label: "Ур чадвар" },
-    { href: "#work", label: "Ажлууд" },
-    { href: "#contact", label: "Холбоо" },
-  ];
+  const links = navLinks[lang];
 
   return (
     <div className="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
@@ -27,7 +41,7 @@ export const Header = () => {
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -38,24 +52,38 @@ export const Header = () => {
           ))}
           <button
             onClick={toggle}
+            className="text-sm text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-200 transition-colors font-mono"
+            aria-label="Toggle language"
+          >
+            {lang === "en" ? "MN" : "EN"}
+          </button>
+          <button
+            onClick={toggleTheme}
             className="text-sm text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-200 transition-colors"
             aria-label="Toggle theme"
           >
             {theme === "light" ? "○" : "●"}
           </button>
           <a
-            href="../Home/sagar-cv.pdf"
+            href="/Battsetseg-CV.pdf"
             download="Battsetseg-CV.pdf"
             target="_blank"
             rel="noreferrer"
             className="text-sm px-4 py-1.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:opacity-80 transition-opacity"
           >
-            CV татах
+            {cvLabel[lang]}
           </a>
         </nav>
 
         <div className="flex lg:hidden items-center gap-3">
-          <button onClick={toggle} className="text-gray-400 text-sm">
+          <button
+            onClick={toggle}
+            className="text-gray-400 text-xs font-mono"
+            aria-label="Toggle language"
+          >
+            {lang === "en" ? "MN" : "EN"}
+          </button>
+          <button onClick={toggleTheme} className="text-gray-400 text-sm">
             {theme === "light" ? "○" : "●"}
           </button>
           <button
@@ -73,7 +101,7 @@ export const Header = () => {
       {isNavOpen && (
         <div className="lg:hidden border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-black">
           <nav className="max-w-3xl mx-auto px-6 py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -84,13 +112,13 @@ export const Header = () => {
               </a>
             ))}
             <a
-              href="../Home/sagar-cv.pdf"
+              href="/Battsetseg-CV.pdf"
               download="Battsetseg-CV.pdf"
               target="_blank"
               rel="noreferrer"
               className="text-sm px-4 py-2 text-center bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg"
             >
-              CV татах
+              {cvLabel[lang]}
             </a>
           </nav>
         </div>
