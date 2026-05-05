@@ -19,7 +19,6 @@ export const Hero = () => {
         </p>
 
         <div className="flex flex-col gap-1 text-sm text-gray-500 dark:text-gray-400">
-          <span>📍 Хан-Уул, Улаанбаатар</span>
           <span className="flex items-center gap-1">
             <span className="inline-block w-2 h-2 rounded-full bg-green-400"></span>
             Шинэ боломжид нээлттэй
