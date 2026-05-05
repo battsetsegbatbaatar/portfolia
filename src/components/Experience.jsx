@@ -1,60 +1,71 @@
 import React from "react";
 import { Label } from "./Label";
-import { Card } from "./Card";
 
 const histories = [
   {
-    position: "Sr. Frontend Developer",
-    startDate: "Nov 2021 ",
-    endDate: " Present",
+    company: "MEVENTO LLC",
+    position: "Backend хөгжүүлэгч",
+    period: "2024.05 — Одоо",
     highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Ut pretium arcu et massa semper, id fringilla leo semper.",
-      "Sed quis justo ac magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Node.js, Express.js ашиглан RESTful API хөгжүүлсэн",
+      "GraphQL endpoint зохион бүтээж хэрэгжүүлсэн",
+      "PostgreSQL мэдээллийн санг удирдаж query оновчилсон",
+      "React frontend-тэй нэгдсэн backend системийг хэрэгжүүлсэн",
     ],
   },
   {
-    position: "Team Lead",
-    startDate: "Jul 2017 ",
-    endDate: " Oct 2021",
+    company: "Melearnболон Meskill",
+    position: "Backend хөгжүүлэгч",
+    period: "2022 — 2024",
     highlights: [
-      "Sed quis justo ac magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Sed quis justo ac magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "E-learning платформын backend архитектурыг хөгжүүлсэн",
+      "REST API endpoint баримтжуулж, мэдээллийн санг удирдсан",
+      "Програм хангамжийн хөгжүүлэлтийн үйл явцад оролцсон",
     ],
   },
   {
-    position: "Full Stack Developer",
-    startDate: "Dec 2015 ",
-    endDate: " May 2017",
+    company: "Monos Group",
+    position: "Дадлагажигч",
+    period: "2022.06 — 2022.08",
     highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Мэдээлэл шинжилгээ, боловсруулалтын ажлуудад оролцсон",
     ],
   },
 ];
 
 export const Experience = () => {
   return (
-    <div className="w-screen bg-gray-50 dark:bg-[#111827] dark:text-[#D1D5DB]">
-      <div className="flex flex-col py-24 px-4 lg:px-20 gap-12 justify-center items-center">
-        <Label
-          text="Experience"
-          para="Here is a quick summary of my most recent experiences:"
-        />
-        <container className="flex flex-col gap-12">
-          {histories.map((history) => (
-            <Card
-              title={history.position}
-              highlights={history.highlights}
-              startDate={history.startDate}
-              endDate={history.endDate}
-            />
+    <section className="max-w-3xl mx-auto px-6 py-16 border-t border-gray-100 dark:border-gray-800">
+      <div className="flex flex-col gap-8">
+        <Label text="Туршлага" />
+        <div className="flex flex-col gap-10">
+          {histories.map((h, i) => (
+            <div key={i} className="flex flex-col gap-3 pl-4 border-l-2 border-gray-200 dark:border-gray-700">
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <span className="font-semibold text-gray-900 dark:text-white">
+                    {h.company}
+                  </span>
+                  <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">
+                    {h.period}
+                  </span>
+                </div>
+                <span className="text-sm text-gray-500 dark:text-gray-400">
+                  {h.position}
+                </span>
+              </div>
+              <ul className="flex flex-col gap-1">
+                {h.highlights.map((item, j) => (
+                  <li key={j} className="text-sm text-gray-600 dark:text-gray-300 flex gap-2">
+                    <span className="text-gray-300 dark:text-gray-600 shrink-0">—</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </container>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
