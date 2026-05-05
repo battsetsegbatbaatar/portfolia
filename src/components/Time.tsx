@@ -15,14 +15,14 @@ export const Time = () => {
     }, 100);
   }, [count, setCount]);
   function startStop() {
-    setCount === !setCount;
+    setCount(0);
   }
   function resert() {
     setCount(0);
   }
   return (
     <div>
-      <button onClick={useEffect}>START</button>
+      <button onClick={() => setCount((c) => c + 1)}>START</button>
       <button>{count}</button>
       <button onClick={startStop}>STOP</button>
       <button onClick={resert}>RESERT</button>
