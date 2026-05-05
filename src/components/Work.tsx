@@ -24,7 +24,7 @@ const projects: { en: Project[]; mn: Project[] } = {
       tech: ["Node.js", "TypeScript", "Express.js", "PostgreSQL", "Redis", "BullMQ", "FFmpeg", "DigitalOcean Spaces", "Docker", "JWT"],
     },
     {
-      title: "Melearnболон — Full-Featured Learning Platform",
+      title: "Melearn — Full-Featured Learning Platform",
       description:
         "Developed and continuously improved the backend for a large-scale e-learning platform with 20+ modules including courses, audiobooks, quizzes, certificates, payments, and notifications.",
       highlights: [
@@ -51,7 +51,7 @@ const projects: { en: Project[]; mn: Project[] } = {
       tech: ["Node.js", "TypeScript", "Express.js", "PostgreSQL", "Redis", "BullMQ", "FFmpeg", "DigitalOcean Spaces", "Docker", "JWT"],
     },
     {
-      title: "Melearnболон — Иж Бүрэн Сургалтын Platform",
+      title: "Melearn — Иж Бүрэн Сургалтын Platform",
       description:
         "Course, audiobook, quiz, certificate, payment, notification зэрэг 20+ module-тэй томоохон e-learning платформын backend-ийг хөгжүүлж, тасралтгүй сайжруулсан.",
       highlights: [

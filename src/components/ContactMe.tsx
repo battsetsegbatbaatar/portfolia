@@ -5,11 +5,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const t = {
   en: {
     title: "Get in Touch",
-    para: "Whether you have a job opportunity, a question, or just want to connect — feel free to reach out.",
+    para: "If you have a project proposal or questions, feel free to reach out.",
   },
   mn: {
     title: "Холбоо барих",
-    para: "Ажиллах санал, асуулт, эсвэл зүгээр танилцахаар ч байсан бичнэ үү.",
+    para: "Проектын санал эсвэл асуулт байвал холбогдоорой.",
   },
 };
 

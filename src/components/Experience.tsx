@@ -11,7 +11,7 @@ const histories = {
       highlights: [
         "Built a video upload & processing pipeline using FFmpeg + BullMQ queue (Meskill)",
         "Implemented real-time video view tracking with Redis and file storage on DigitalOcean Spaces",
-        "Developed a full-featured e-learning backend with GraphQL (Apollo) + REST API hybrid architecture (Melearnболон)",
+        "Developed a full-featured e-learning backend with GraphQL (Apollo) + REST API hybrid architecture (Melearn)",
         "Integrated QPay, Golomt Bank, and Khan Bank payment gateways with subscription and one-time order flows",
         "Built 20+ modules including Socket.io real-time, audiobook, quiz, certificate, and analytics",
         "Improved file upload reliability with queue processing; iterated on APIs based on user feedback",
@@ -43,7 +43,7 @@ const histories = {
       highlights: [
         "FFmpeg + BullMQ queue ашиглан видео upload & боловсруулалтын pipeline хэрэгжүүлсэн (Meskill)",
         "Redis-ээр видео үзэлтийн бүртгэл, DigitalOcean Spaces-д file хадгалах систем барьсан",
-        "GraphQL (Apollo) + REST API хавсарсан архитектуртай иж бүрэн e-learning backend хөгжүүлсэн (Melearnболон)",
+        "GraphQL (Apollo) + REST API хавсарсан архитектуртай иж бүрэн e-learning backend хөгжүүлсэн (Melearn)",
         "QPay, Голомт, Хаан банкны payment интеграци болон Firebase push notification хэрэгжүүлсэн",
         "Socket.io real-time, audiobook, quiz, certificate, analytics зэрэг 20+ module хөгжүүлсэн",
         "Хэрэглэгчдийн хүсэлтийн дагуу file upload-ыг queue-тэй болгож, API-г тасралтгүй сайжруулсан",
