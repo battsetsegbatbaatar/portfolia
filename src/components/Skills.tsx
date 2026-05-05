@@ -4,15 +4,23 @@ import { Label } from "./Label";
 const categories = [
   {
     name: "Хэл",
-    skills: ["JavaScript", "SQL"],
+    skills: ["TypeScript", "JavaScript", "SQL"],
   },
   {
-    name: "Framework & Library",
-    skills: ["React", "React Native", "Next.js", "Node.js", "Express.js", "GraphQL"],
+    name: "Backend",
+    skills: ["Node.js", "Express.js", "GraphQL (Apollo)", "REST API", "Socket.io", "BullMQ"],
   },
   {
-    name: "Мэдээллийн сан & Хэрэгсэл",
-    skills: ["PostgreSQL", "Git", "GitHub", "Postman"],
+    name: "Мэдээллийн сан & Cache",
+    skills: ["PostgreSQL", "MongoDB", "Redis", "Sequelize"],
+  },
+  {
+    name: "Cloud & Infrastructure",
+    skills: ["DigitalOcean Spaces", "AWS S3", "Docker", "FFmpeg"],
+  },
+  {
+    name: "Интеграци & Хэрэгсэл",
+    skills: ["Firebase", "QPay", "JWT", "Multer", "Nodemailer", "Git", "Postman"],
   },
 ];
 

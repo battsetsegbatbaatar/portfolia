@@ -3,22 +3,16 @@ import { Label } from "./Label";
 
 const projects = [
   {
-    title: "MEVENTO — Event Management Platform",
+    title: "Meskill — Байгуулагчийн E-Learning Platform",
     description:
-      "Арга хэмжээний удирдлагын платформын backend системийг Node.js болон PostgreSQL ашиглан хөгжүүлсэн. GraphQL API нэвтрүүлж, React frontend-тэй нэгтгэсэн.",
-    tech: ["Node.js", "GraphQL", "PostgreSQL", "React", "Express.js"],
+      "MEVENTO-д ороод хийсэн эхний төсөл. Байгуулагчдад зориулсан e-learning платформын backend-ийг эхнээс нь зохион бүтээсэн. FFmpeg + BullMQ queue ашиглан видео upload & боловсруулалтын pipeline хэрэгжүүлж, DigitalOcean Spaces-д хадгалах систем барьсан. Redis-ээр видео үзэлтийн бүртгэлийг real-time шийдсэн. Docker-оор deploy хийсэн.",
+    tech: ["Node.js", "TypeScript", "Express.js", "PostgreSQL", "Redis", "BullMQ", "FFmpeg", "DigitalOcean Spaces", "Multer", "Docker", "JWT"],
   },
   {
-    title: "Melearnпlatform — E-Learning Backend",
+    title: "Melearnболон — Иж Бүрэн Сургалтын Platform",
     description:
-      "Онлайн сургалтын платформын backend архитектурыг зохион бүтээж хөгжүүлсэн. REST API endpoint баримтжуулж, мэдээллийн санг удирдсан.",
-    tech: ["Node.js", "REST API", "PostgreSQL", "JavaScript", "Postman"],
-  },
-  {
-    title: "Meskill — Skills Training API",
-    description:
-      "Ур чадвар сургалтын платформын API системийг хөгжүүлсэн. React Native мобайл апп-тай нэгдсэн backend-ийг хариуцаж хэрэгжүүлсэн.",
-    tech: ["Node.js", "React Native", "PostgreSQL", "GraphQL"],
+      "Course, audiobook, quiz, certificate, payment, notification зэрэг 20+ module-тэй иж бүрэн e-learning платформын backend. GraphQL (Apollo) + REST API хавсарсан архитектур ашигласан. QPay, Голомт, Хаан банкны payment интеграци, Firebase push notification, Socket.io real-time холболт хэрэгжүүлсэн. Хэрэглэгчдийн хүсэлтийн дагуу file upload-ыг queue-тэй болгож, API-г тасралтгүй сайжруулсан.",
+    tech: ["Node.js", "TypeScript", "Express.js", "GraphQL", "PostgreSQL", "MongoDB", "Redis", "DigitalOcean Spaces", "FFmpeg", "Socket.io", "Firebase", "QPay", "JWT"],
   },
 ];
 
