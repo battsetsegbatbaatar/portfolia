@@ -1,16 +1,16 @@
-import React from "react";
-import { Label } from "./Label";
-import { useLanguage } from "@/contexts/LanguageContext";
+import React from 'react';
+import { Label } from './Label';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const t = {
   en: {
-    title: "Get in Touch",
-    para: "If you have a project proposal or questions, feel free to reach out.",
+    title: 'Get in Touch',
+    para: 'If you have a job proposal or questions, feel free to reach out.'
   },
   mn: {
-    title: "Холбоо барих",
-    para: "Проектын санал эсвэл асуулт байвал холбогдоорой.",
-  },
+    title: 'Холбоо барих',
+    para: 'Ажлын санал эсвэл асуулт байвал холбогдоорой.'
+  }
 };
 
 export const ContactMe = () => {
@@ -19,7 +19,10 @@ export const ContactMe = () => {
   return (
     <section className="max-w-3xl mx-auto px-6 py-16 border-t border-gray-100 dark:border-gray-800">
       <div className="flex flex-col gap-8">
-        <Label text={t[lang].title} para={t[lang].para} />
+        <Label
+          text={t[lang].title}
+          para={t[lang].para}
+        />
         <div className="flex flex-col gap-3">
           <a
             href="mailto:bg_elestren@icloud.com"
